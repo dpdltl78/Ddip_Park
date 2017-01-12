@@ -1,2 +1,5 @@
 # Ddip_Park
 아두이노와 직접구현 IPS 통한 주차 공간 안내 서비스! sk_didimdol 1 team
+
+# 팀원 목록
+팀장 : 박초롱 dpdltl78@nave.com
