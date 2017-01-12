@@ -3,3 +3,4 @@
 
 # 팀원 목록
 팀장 : 박초롱 dpdltl78@nave.com
+팀원1 : 민동연 mdy89@hanmail.net
