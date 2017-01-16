@@ -12,18 +12,18 @@ public class UpAndDown_Ver2 {
     	int count=0;
     	double sum=0;
         
-        System.out.println("                 | | | | | | | | | | |");
+        System.out.println("                  | | | | | | | | | | |");
         System.out.println("              | |                       | | ");
         System.out.println("            |                               |");
-        System.out.println("          |                                   | ");                 
-        System.out.println(" 	     |              UP & DOWN              |");
+        System.out.println("          |                                   | ");
+        System.out.println(" 	 |              UP & DOWN              |");
         System.out.println("        | |                                   | |");
         System.out.println("        |   |                               |   |");
         System.out.println("        |     | |                       | |     |");
         System.out.println("        |         | | | | | | | | | | |         |");             
         System.out.println("        |                                       |");
         System.out.println("        |                                       |");
-        System.out.println("         |              좋은데이               | ");
+        System.out.println("         |               좋은데이                    | ");
         System.out.println("          |                                   |  ");
         System.out.println("            |                               |");
         System.out.println("              | |                       | |");
