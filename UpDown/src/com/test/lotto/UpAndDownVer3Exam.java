@@ -17,20 +17,17 @@ public class UpAndDownVer3Exam {
  while(true)			{
 	 
  
-    UpAndDownVer3 game =new UpAndDownVer3();
+    UpAndDownVer3 game = new UpAndDownVer3();
     
     System.out.println("Up & Down 게임입니다.");
     System.out.println("1부터 100까지의 숫자 중 맞춰주세요.");
    
     game.input = trynum.nextInt(); //입력받기 
     
-   
-    	//game.input();
-    while(game.input!=game.random_num){
-    		game.loop();
-    		game.input=trynum.nextInt();
-    		}
-    
+    while(!game.loop()){
+		game.input=trynum.nextInt();
+		}
+
     System.out.println("정답입니다!!!");
     System.out.println("당신은" + game.count + " 번만에 정답을 맞췄습니다!!!");
     //--
