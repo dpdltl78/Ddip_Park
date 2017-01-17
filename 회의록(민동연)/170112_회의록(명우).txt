@@ -1,0 +1,70 @@
+TITLE : 170112_회의록(명우)
+DATE  : 2017-01-12
+
+KEYWORKDS : ER 다이어그램, TABLE-user,park,time_history,area
+
+회의내용
+1. 시나리오에 따른 테이블 구성!
+
+시나리오
+
+(1)차가 진입(주차장)
+-현재 주차장조회(select)->번지(장소)/주차여부
+
+(2-1)차가 주차(자리있음) 
+-주차정보 update
+-장소 안내
+-시간 
+
+(202)차가 주차(자리 없음)
+-다른 주차장 조회
+-곧 나갈 차가 있는지 조회(select 해서 시간<90)
+
+(3)차가 나간다
+-update->주차여부X로/장소/시간
+
+<1안>
+    User         park         Time_History   
+------------  ----------  ------------------
+user_no       park_no     park_no
+user_id       area_no     area_no
+user_pw       area_name   area_user
+user_gender   area_user   time
+user_age
+
+<2안>
+    User         park         Time_History       Area
+------------  ----------  ------------------ -------------
+user_no       park_no     park_no            area_no
+user_id       area_no     area_no            area_name
+user_pw                   area_user
+user_gender   area_user   time
+user_age
+
+=> ★최종★
+  Client         park         Time_History                 
+------------  ----------  ------------------               
+client_no       park_no     park_no
+client_id       sensor_no   area_no
+client_pw                   area_user
+client_gender   client_user   time
+client_age
+
+client_no : 유저 넘버
+client_id : 유저 ID(지금은 이름 이니셜로 함)
+client_pw : 유저 패스워드(4자리로 아무거나 해둠)
+client_gender : 유저 성별(m 또는 f로 해둠)
+client_age : 유저 나이대(빅데이타 분석??을 위하여)
+
+park테이블 정보 : 다인이에게
+time_history 정보 : 태준이형에게
+
+
+오늘의 업적
+1. table 어느정도 했다.
+2. client테이블에 정보를 insert 했다.
+3. update 를 어떻게 할지 방안을 생각해야한다.
+4. 7시부터 10시까지 했음.
+
+내일의 할 것
+1. 4조 저거(?) 처럼 우리도 만들기~
