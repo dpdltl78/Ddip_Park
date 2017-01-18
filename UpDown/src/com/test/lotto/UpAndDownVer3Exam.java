@@ -13,8 +13,8 @@ public class UpAndDownVer3Exam {
 
 	Scanner trynum = new Scanner(System.in);
 	Scanner checkchar = new Scanner(System.in);
-
 	UpAndDownVer3 game = new UpAndDownVer3();
+
 	
 	public UpAndDownVer3Exam(){
 		sum = 0;
@@ -22,12 +22,14 @@ public class UpAndDownVer3Exam {
 		check = ' ';
 		total_length =0;
 		loop_check=false;
-		
+			
 	}
 
 
 String start(){
+
 	print = "Up & Down 게임입니다.\n1부터 100까지의 숫자 중 맞춰주세요.";
+	game = new UpAndDownVer3();
 	return print;
 }
 
@@ -53,27 +55,27 @@ String loopinput(){
 			continue;
 	}
 	
-	print="정답입니다!!!\n당신은" + game.count + " 번만에 정답을 맞췄습니다!!!";
-	loop_check=true;
-	aary[game_count++]=game.count;
+	print="정답입니다!!!\n당신은 " + game.count + " 번만에 정답을 맞췄습니다!!!";
+	//loop_check=true;
+	game.aary[game_count++]=game.count;
 	return print;
 //			// --
 }
 
 void reset_count(){
-	game.count = 0; // count값 초기화
-	total_length = 0;
-	sum = 0; // sum값 초기화
+//	game.count = 0; // count값 초기화
+//	total_length = 0;
+//	sum = 0; // sum값 초기화
 }
 
 String calculate(){
 	for (int i = 0; i < game.aary.length; i++) {
 	if (game.aary[i] > 0) {
-		sum = sum + aary[i];
+		sum = sum + game.aary[i];
 		total_length++;
 		}	
 	}
-	print="지금까지 당신의 평균은" + "" + "번 입니다. \n다시 하시겠습니까?(Y/N)";
+	print="지금까지 당신의 평균은" + sum/(total_length) + "번 입니다. \n다시 하시겠습니까?(Y/N)";
 	
 	return print;
 }	
@@ -81,7 +83,7 @@ String calculate(){
 boolean askagain(){
 	check = checkchar.next().charAt(0);
 	if (check == 'Y' || check == 'y') {
-		loop_check=true;
+	
 		return true;
 	} else if (check == 'N' || check == 'n') {
 		System.out.println("안녕히 가세요~");

@@ -7,11 +7,11 @@ public class UpAndDownVer3EExam {
 		do{
 			System.out.print(main_game.start());
 		//	main_game.input();
-			while(main_game.game.loop()!=2 && main_game.loop_check==false)
+			while(main_game.game.loop()!=2 )
 			{
 			System.out.println(main_game.loopinput());
 			}
-			
+			if(main_game.loop_check==false)
 			System.out.println(main_game.calculate());
 			main_game.reset_count();
 		}while(main_game.askagain()==true);
