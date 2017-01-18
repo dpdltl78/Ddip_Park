@@ -1,10 +1,5 @@
 package com.test.lotto;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d833c117fb868fa1dd46b2b44f1f9ff1cac39230
-
 public class UpAndDownVer3 {
 	int count;
     int input;
