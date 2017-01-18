@@ -1,6 +1,5 @@
 package com.test.lotto;
 
-import java.util.Scanner;
 
 public class UpAndDownVer3 {
 	int count;
