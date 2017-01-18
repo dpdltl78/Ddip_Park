@@ -1,65 +1,55 @@
 package com.test.lotto;
 
 public class UpAndDownVer3 {
-	int count;
-    int input;
-    int random_num;
-    int[] aary= new int[100];
- 
-    String Up;
-    String Down;
-    String loop_result;
- 
-	public UpAndDownVer3(){
-		count=0;
-	    input = 0;
-	    random_num= (int)(Math.random()*100+1);
-	    aary[count]+=count;
-	    Up="UP!!\n화면에 숫자를 한 번 더 입력하세요.";
-	    Down="DOWN!!!!\n화면에 숫자를 한 번 더 입력하세요.";
-		}
-	    
+	private int count;
+	private int input;
+	private final int random_num;
+	private char c;
+	static int[] arr = new int[100];
 
-	
-	
-int loop(){	
-		
-	       //  input = trynum.nextInt(); //입력받기
-		while(input!=random_num){
-			//input = trynum.nextInt();
-	         	//count++;
-	         	if(input<random_num)    
-	         	{
-	         		//System.out.println("UP!!!!");
-	         		//System.out.println("화면에 숫자를 한 번 더 입력하세요.");
-	         		loop_result =Up;
-	         		return 0;
-		        	}
-		        	else if(input>random_num)
-		        	{
-		        	//System.out.println("DOWN!!!!"); 
-	     		  	//System.out.println("화면에 숫자를 한 번 더 입력하세요.");
-		        	loop_result=Down;
-	     		  	return 1;
-		        	}
-		        	else 
-		        	{
-		        	return 2;
-		        	}
-	         
-	     
+	public UpAndDownVer3() {
+		count = 0;
+		input = 0;
+		random_num = (int) (Math.random() * 100 + 1);
+	}
+
+	public int loop() {
+		while (input != random_num) {
+			if (input < random_num) {
+				return 0;
+			} else if (input > random_num) {
+				return 1;
+			} else {
+			}
 		}
 		return 2;
 	}
 
-void count()
-{
-	count++;
+	public void plusCount() {
+		count++;
+	}
+
+	public int getRanNum() {
+		return random_num;
+	}
+
+	public int getInput() {
+		return input;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void putC(char input) {
+		c = input;
+	}
+
+	public char getC() {
+		return c;
+	}
+
+	public void putNum(int num) {
+		this.input = num;
+	}
 }
-}
-
-    
-
-
-
-
