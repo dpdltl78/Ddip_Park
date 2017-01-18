@@ -1,0 +1,89 @@
+﻿
+*포탈별 다양한 API들
+-생각 계정정보는 SQL
+-Time_history는 NoSQL?? -포기
+
+1.빅데이터플랫폼 -포기
+2.페이스북
+개발자 앱 메이커 https://developers.facebook.com/products/analytics
+페이스북 안드로이드 깃허브 https://developers.facebook.com/products/analytics
+페이스북 안드로이드용 sdk 변수들
+https://developers.facebook.com/docs/reference/android/current
+자바스크립트로 만드는 페이스북 PHP SDK
+https://developers.facebook.com/docs/php/howto/example_access_token_from_javascript
+
+
+Facebook 로그인연동 with 안드로이드 스튜디오
+http://blog.naver.com/juseyo86/220601836565
+http://sojeong721.blog.me/130157498555
+카카오톡 로그인
+https://github.com/ParkSangGwon/KakaoLogin
+
+구글맵 API 
+http://akaisun.tistory.com/19
+
+
+얻을수 있는 정보
+
+
+
+
+웹인증코드 
+사진, 이메일,전화번호,
+유저인증후 로그인상태에서 앱에접근할수있다.
+광고기능
+
+
+3.플로우차트/순서도/시퀀스다이어그램(통신)
+
+시나리오- 
+진입해. 지도 띄워
+
+<자리 있을경우> 
+1. 차량이 네비에서 특정위치에 도달한다.
+2. 구글 지도를 (팝업)띄운다. (동국대가 뜰것이다) 
+3. 동국대가 뜨면, 아두이노 gps모듈을 이용해 해당 아두이노의 위치가 구글 지도 위에 뜰것이다.
+//gps가 같은 교실안에서 얼마나 정확할지 모르겠다.
+빛센서릁 통한 아두이노 주차 https://create.arduino.cc/projecthub/KaustubhAgarwal/smart-parking-bdfa99
+
+4. 그러면 차량이 이동하고, 초음파(혹은 빛)센서를 이용해 is_parking(이건 아두이노를 위한 변수)/DB를 위한 변수아님 을 얻어서 갱신한다. 
+//
+테스트프로토콜로 MQTT사용할 예정 http://www.joinc.co.kr/w/man/12/MQTT/Tutorial
+아두이노에서 wifi 기반 mqtt 사용하기  
+http://www.life4iot.com/2016/08/01/arduino%EC%97%90%EC%84%9C-wi-fi-%EA%B8%B0%EB%B0%98%EC%9D%98-mqtt-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/
+
+-사실 굳이 mqtt를 사용할 뚜렷한 목적은 보이지 않으나 IoT에 가장 활발하게 쓰이는 프로토콜로서 메세지 전송속도 향상에 도움이될것이나 '눈에 띌지'여부는 미지수, 메세지 전송속도가 충분히 느린지가 관건. 느리다면, mqtt필수
+5. SQL 갱신 처리 완료
+
+<자리없을경우>
+1. 차량이 네비에서 특정위치에 도달한다.
+2. 구글 지도를 (팝업)띄운다. (동국대가 뜰것이다) 
+3. 동국대가 뜨면, 아두이노 gps모듈을 이용해 해당 아두이노의 위치가 구글 지도 위에 뜰것이다.(select 장소, 각 client_no가 NULL인지 아닌지 확인)->근데 다 NOT NULL
+
+4-1) 시간 < 90?
+4-2) 빅데이터로 축적해온 시간 , (근방 모든 user의 평소 자리점유시간파악)
+MoSQL을 사용한다면 아이디 당 최소 수백,수십개의 장소와 이용시간,점유시간 필요할것/ 
+하지만 장소,이용시간,점유시간의 평균을 구해. 각 'parking'의 평균 이용시간과 점유시간을 반환해도 충분히 의미있을 것 같다.
+
+
+프랑스앱 Path to park http://www.parkeon.com/smart-city/big-data-2/
+
+이동뜨는 구글 https://www.google.com/maps/timeline?pb=!1m2!1m1!1s2017-01-12
+
+알아보니 어려움 정도
+페북연동 2 빅데이터분석 3 지도 띄우기 1 
+
+
+빅데이터란 무엇인가 
+https://ko.wikipedia.org/wiki/%EB%B9%85_%EB%8D%B0%EC%9D%B4%ED%84%B0
+
+만약 빅데이터한다면 플랫폼은 아파치 하둡
+이유 : 자바런타임 환경이라서
+구글파일시스템의 것은 대용량 스루풋을 제공하는대신 레이턴시가 있다고한다.
+빅데이터를 저장할 보관소 하둡
+http://www.slideshare.net/madvirus/hdfs-28871456
+-알아본결과 빅데이터 알고 적용하는데만 2주는 걸릴것. 
+R안쓰는 이유 
+R의 특징인 분석, 그래프를 쓸 이유가 없다.
+
+-타임은 시간에 따른 고유시간 id가 필요해보인다.
