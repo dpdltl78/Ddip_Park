@@ -5,8 +5,6 @@ public class UpAndDownVer3Exam {
 	private int game_count;
 	private int total_length;
 
-	static int[] arr = new int[100];
-
 	UpAndDownVer3 game;
 
 	public UpAndDownVer3Exam() {
