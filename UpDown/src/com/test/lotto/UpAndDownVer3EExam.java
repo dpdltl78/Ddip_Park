@@ -15,5 +15,7 @@ public class UpAndDownVer3EExam {
 			System.out.println(main_game.calculate());
 			main_game.reset_count();
 		}while(main_game.askagain()==true);
+		
+		System.out.println(main_game.print);
 	}
 }

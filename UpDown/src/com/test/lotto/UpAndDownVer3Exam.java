@@ -86,10 +86,10 @@ boolean askagain(){
 	
 		return true;
 	} else if (check == 'N' || check == 'n') {
-		System.out.println("안녕히 가세요~");
+		print="안녕히 가세요~";
 		return false;
 	} else {
-		System.out.println("손가락이 미끌어 졌나요? 잘가요");
+		print="손가락이 미끌어 졌나요? 잘가요";
 		return false;
 	}
 }
