@@ -3,13 +3,13 @@ package com.test.updowngame;
 import java.util.Scanner;
 
 public class TotalGame {
-	static int Up = 0;//static
-	static int Down = 1; 
+	final static int Up = 0;//static
+	final static int Down = 1; 
 	
-	static char Yes = 'Y';
-	static char yes = 'y';
-	static char No = 'N';
-	static char no = 'n';	
+	final static char Yes = 'Y';
+	final static char yes = 'y';
+	final static char No = 'N';
+	final static char no = 'n';	
 	
 	
 	public static void main(String[] args) {
@@ -22,27 +22,27 @@ public class TotalGame {
 		
 		
 		do {
-		System.out.println("Up & Down 게임입니다. \n 1부터 100까지 숫자 중 맞춰주세요.");
-		
-		PlayGame.setUserInput(try_num.nextInt());
-		PlayGame.playCount(); //시도횟수 추가
-		
-		while(PlayGame.getRandomNum()!=PlayGame.getUserInput()){
-			if(PlayGame.getCompareNum()== Up ){
-				System.out.println("Up!!!!!");
-				
-			}
-			else if(PlayGame.getCompareNum()==Down){
-				System.out.println("Down!!!!!");
-			}
-			else{
-				continue;
-			}
+			System.out.println("Up & Down 게임입니다. \n 1부터 100까지 숫자 중 맞춰주세요.");
+			
 			PlayGame.setUserInput(try_num.nextInt());
-			PlayGame.playCount();//시도횟수 추가
-	}
-		System.out.println("정답입니다.\n당신은 "+PlayGame.getPlayCount()
-		+"번 만에 맞췄습니다.");
+			PlayGame.playCount(); //시도횟수 추가
+			
+			while(PlayGame.getRandomNum()!=PlayGame.getUserInput()){
+				if(PlayGame.getCompareNum()== Up ){
+					System.out.println("Up!!!!!");
+					
+				}
+				else if(PlayGame.getCompareNum()==Down){
+					System.out.println("Down!!!!!");
+				}
+				else{
+					continue;
+				}
+				PlayGame.setUserInput(try_num.nextInt());
+				PlayGame.playCount();//시도횟수 추가
+			}
+			System.out.println("정답입니다.\n당신은 "+PlayGame.getPlayCount()
+			+"번 만에 맞췄습니다.");
 		
 			PlayGame.inputCountArr(PlayGame.getPlayCount());
 			
@@ -63,6 +63,6 @@ public class TotalGame {
 				is_game_finished = false;
 				System.out.println("손가락이 미끄러졌나요? 조심히 가세요~");
 			}
-	} while(is_game_finished);
-}//main
+		} while(is_game_finished);
+	}//main
 }//Total Game
