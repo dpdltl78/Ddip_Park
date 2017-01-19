@@ -6,7 +6,7 @@ public class PlayGame extends SetElements {// 1회 + sum도 계산
 		play_count = 0;
 		game_count = 0;
 		user_input = 0;
-		random_num = (int) (Math.random() * 10 + 1);
+		random_num = (int) (Math.random() * 100 + 1);
 		sum = 0;
 		playGameStart();
 	}
