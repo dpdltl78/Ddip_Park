@@ -1,17 +1,6 @@
 package com.test.updowngame;
 
-public class PlayGame {// 1회 + sum도 계산
-	private int play_count;
-	private int game_count;
-
-	private int user_input;
-	private int random_num;
-	private char answer;
-	static int[] arr = new int[100];
-
-	private double avg=0;
-	private double sum;
-	private double total_length = 0;
+public class PlayGame extends SetElements {// 1회 + sum도 계산
 
 	public PlayGame() {// 게임을 초기화
 		play_count = 0;

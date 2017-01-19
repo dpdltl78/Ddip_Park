@@ -3,9 +3,8 @@ package com.test.updowngame;
 import java.util.Scanner;
 
 public class TotalGame {
-	final static int Up = 0;//static
+	final static int Up = 0;
 	final static int Down = 1; 
-	
 	final static char Yes = 'Y';
 	final static char yes = 'y';
 	final static char No = 'N';
@@ -22,7 +21,17 @@ public class TotalGame {
 		
 		
 		do {
-			System.out.println("Up & Down 게임입니다. \n 1부터 100까지 숫자 중 맞춰주세요.");
+			System.out.println("┌───────────────┐");
+			System.out.println("│               │");
+			System.out.println("│   UP & DOWN   │");
+			System.out.println("│               │");
+			System.out.println("│    G A M E    │");
+			System.out.println("│               │");
+			System.out.println("│   S T A R T   │");
+			System.out.println("│               │");
+			System.out.println("└───────────────┘");
+//			System.out.println("Up & Down 게임입니다.\n");
+			System.out.println("1부터 100까지 숫자 중 맞춰주세요.");
 			
 			PlayGame.setUserInput(try_num.nextInt());
 			PlayGame.playCount(); //시도횟수 추가
@@ -41,22 +50,20 @@ public class TotalGame {
 				PlayGame.setUserInput(try_num.nextInt());
 				PlayGame.playCount();//시도횟수 추가
 			}
-			System.out.println("정답입니다.\n당신은 "+PlayGame.getPlayCount()
-			+"번 만에 맞췄습니다.");
+			System.out.println("정답입니다.\n당신은 "+PlayGame.getPlayCount() +"번 만에 맞췄습니다.");
 		
 			PlayGame.inputCountArr(PlayGame.getPlayCount());
 			
 			PlayGame.addSum();
-			System.out.println("지금까지 당신의 평균은 "+ PlayGame.getAver() 
-			+"번 입니다.");
+			System.out.println("지금까지 당신의 평균은 "+ PlayGame.getAver() +"번 입니다.");
 			System.out.println("한 번 더 플레이 하시겠습니까? (Y/N)");
 			PlayGame.plusGameCount();
 			
-			PlayGame.setAnswer(check_char.next().charAt(0));
-			if(PlayGame.getAnswer() == Yes || PlayGame.getAnswer() == yes) {
+			char exitChar = check_char.next().charAt(0);
+			if (exitChar == Yes || exitChar == yes) {
 				is_game_finished = true;
 				PlayGame.resetCount();
-			} else if (PlayGame.getAnswer() == No || PlayGame.getAnswer() == no) {
+			} else if (exitChar == No || exitChar == no) {
 				is_game_finished = false;
 				System.out.println("안녕히 가세요~");
 			} else {
@@ -66,3 +73,14 @@ public class TotalGame {
 		} while(is_game_finished);
 	}//main
 }//Total Game
+
+/*
+			PlayGame.setAnswer(check_char.next().charAt(0));
+			if(PlayGame.getAnswer() == Yes || PlayGame.getAnswer() == yes) {
+				
+			} else if (PlayGame.getAnswer() == No || PlayGame.getAnswer() == no) {
+				
+			} else {
+				
+			}
+*/
