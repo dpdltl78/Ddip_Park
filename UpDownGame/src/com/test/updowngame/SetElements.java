@@ -1,16 +1,18 @@
 package com.test.updowngame;
 
-public class SetElements {
+import java.io.Serializable;
+
+public class SetElements implements Serializable{ 
 	protected int play_count;
 	protected int game_count;
 
 	protected int user_input;
-	protected int random_num;
+	transient protected int random_num;
 	protected char answer;
 	static int[] arr = new int[100];
 	
-	protected double avg=0;
+	protected double avg;
 	protected double sum;
-	protected double total_length = 0;
+	protected double total_length;
 
 }

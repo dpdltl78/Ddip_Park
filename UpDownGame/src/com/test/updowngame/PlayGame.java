@@ -1,12 +1,45 @@
 package com.test.updowngame;
 
-public class PlayGame extends SetElements {// 1회 + sum도 계산
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
+
+public class PlayGame extends SetElements implements Serializable{// 1회 + sum도 계산
+
+	public static void save(PlayGame playGame, String filename){
+		try{
+			
+			FileOutputStream fos = new FileOutputStream(filename);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(playGame);
+			oos.flush(); oos.close(); fos.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static PlayGame load(String filename){
+		PlayGame playGame=null;
+		try{
+			FileInputStream fis = new FileInputStream(filename);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			playGame = (PlayGame)ois.readObject();
+			ois.close(); fis.close();
+		}catch(Exception e){e.printStackTrace();}
+		return playGame;
+	}
+	///---
+	
+	
+	
 	public PlayGame() {// 게임을 초기화
 		play_count = 0;
 		game_count = 0;
 		user_input = 0;
-		random_num = (int) (Math.random() * 100 + 1);
+		random_num = (int) (Math.random() * 10 + 1);
 		sum = 0;
 		playGameStart();
 	}
